@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sceneify/animation": "^0.0.0-main-7520a719",
-    "@sceneify/core": "^0.0.0-main-7520a719",
-    "@sceneify/filters": "^0.0.0-main-7520a719",
-    "@sceneify/sources": "^0.0.0-main-7520a719"
+    "@sceneify/animation": "main",
+    "@sceneify/core": "main",
+    "@sceneify/filters": "main",
+    "@sceneify/sources": "main"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
