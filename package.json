@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node src/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +12,9 @@
     "@sceneify/animation": "main",
     "@sceneify/core": "main",
     "@sceneify/filters": "main",
-    "@sceneify/sources": "main"
+    "@sceneify/sources": "main",
+    "dotenv": "^16.0.2",
+    "fastify": "^4.6.0"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
