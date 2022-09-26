@@ -1,9 +1,9 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@sceneify/animation': main
-  '@sceneify/core': main
-  '@sceneify/filters': main
+  '@sceneify/animation': ^0.0.0-main-d049c069
+  '@sceneify/core': ^0.0.0-main-d049c069
+  '@sceneify/filters': ^0.0.0-main-d049c069
   '@sceneify/sources': ^0.0.0-main-d049c069
   '@types/node': ^18.7.16
   dotenv: ^16.0.2
@@ -334,12 +334,12 @@ packages:
     engines: {node: '>= 0.10'}
     dev: false
 
-  /isomorphic-ws/4.0.1_ws@8.8.1:
+  /isomorphic-ws/4.0.1_ws@8.9.0:
     resolution: {integrity: sha512-BhBvN2MBpWTaSHdWRb/bwdZJ1WaehQ2L1KngkCkfLUGF0mAWAT1sQUQacEmQ0jXkFw/czDXPNQSL5u2/Krsz1w==}
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 8.8.1
+      ws: 8.9.0
     dev: false
 
   /json-schema-traverse/1.0.0:
@@ -381,9 +381,9 @@ packages:
       crypto-js: 4.1.1
       debug: 4.3.4
       eventemitter3: 4.0.7
-      isomorphic-ws: 4.0.1_ws@8.8.1
+      isomorphic-ws: 4.0.1_ws@8.9.0
       type-fest: 2.19.0
-      ws: 8.8.1
+      ws: 8.9.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -575,8 +575,8 @@ packages:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
     dev: true
 
-  /ws/8.8.1:
-    resolution: {integrity: sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==}
+  /ws/8.9.0:
+    resolution: {integrity: sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1

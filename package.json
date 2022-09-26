@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sceneify/animation": "main",
-    "@sceneify/core": "main",
-    "@sceneify/filters": "main",
-    "@sceneify/sources": "main",
+    "@sceneify/animation": "^0.0.0-main-d049c069",
+    "@sceneify/core": "^0.0.0-main-d049c069",
+    "@sceneify/filters": "^0.0.0-main-d049c069",
+    "@sceneify/sources": "^0.0.0-main-d049c069",
     "dotenv": "^16.0.2",
     "fastify": "^4.6.0"
   },

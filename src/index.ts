@@ -1,8 +1,7 @@
 import { OBS } from "@sceneify/core";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 
-import { mainScene } from "./base";
-import { startHonk } from "./honk";
+import { mainScene, programScene } from "./base";
 import { setupMixItUp } from "./mixitup";
 
 dotenv.config();
@@ -12,10 +11,22 @@ async function main() {
 
   await obs.connect("ws://localhost:4455", process.env.OBS_PASSWORD);
 
-  await mainScene.link(obs);
+  await mainScene.create(obs);
+
+  const canvas = await obs.call("GetVideoSettings");
+
+  await mainScene.item("background").source.setSettings({
+    width: canvas.baseWidth,
+    height: canvas.baseHeight,
+  });
+
+  await programScene.link(obs);
+
+  await programScene.createItem("mainScene", {
+    source: mainScene,
+  });
 
   setupMixItUp();
-  await startHonk(mainScene)
 }
 
 main();

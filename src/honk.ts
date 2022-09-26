@@ -4,7 +4,7 @@ import {
   Alignment,
   MonitoringType,
 } from "@sceneify/core";
-import { MediaSource, DecklinkInput } from "@sceneify/sources";
+import { MediaSource } from "@sceneify/sources";
 
 import { mixItUpApi } from "./mixitup";
 
@@ -67,7 +67,3 @@ mixItUpApi.get("/honk", async () => {
 
   await itemHonkRandom.remove();
 });
-
-export const startHonk = async (scene: Scene) => {
-  await scene.createItem("honkScene", { source: honkScene });
-};
