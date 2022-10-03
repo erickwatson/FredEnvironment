@@ -1,17 +1,12 @@
 import { Alignment, Scene } from "@sceneify/core";
-import { Easing, setDefaultEasing } from "@sceneify/animation";
 import { BrowserSource, ColorSource, ImageSource } from "@sceneify/sources";
 
-import { rgba } from "./utils";
+import { cameraScene } from "./camera";
 import { honkScene } from "./honk";
 
-setDefaultEasing(Easing.InOut);
+import { rgba } from "../utils";
 
-export const programScene = new Scene({
-  name: "Main Scene",
-  items: {},
-});
-
+// Created inside programScene
 export const mainScene = new Scene({
   name: "New Main Scene",
   items: {
@@ -19,9 +14,9 @@ export const mainScene = new Scene({
       source: new ColorSource({
         name: "BG ColourSource",
         settings: {
-          color: rgba(24, 164, 245, 255)
+          color: rgba(24, 164, 245, 255),
         },
-      }),  
+      }),
     },
     msPaintBottomBorder: {
       source: new ImageSource({
@@ -37,22 +32,22 @@ export const mainScene = new Scene({
     horizontalChatSource: {
       source: new BrowserSource({
         name: "Horizontal Chat Source SF",
-        settings:{
+        settings: {
           url: "https://streamelements.com/overlay/61769a22357b6c606313f13e/Td-jatLs5Kv6N1Myjx1ywVpspEueptAoRhxwT-H3NfLRfA9P",
           css: `
-          body {
-            background-color: rgba(0, 0, 0, 0);
-            font-color: "white";
-            font-family: "Arial" !important;
-            font-weight: 500 !important; 
-            margin: 0px auto;
-            overflow: hidden;
-          } 
-          `,
+            body {
+              background-color: rgba(0, 0, 0, 0);
+              font-color: "white";
+              font-family: "Arial" !important;
+              font-weight: 500 !important; 
+              margin: 0px auto;
+              overflow: hidden;
+            } 
+            `,
           reroute_audio: true,
           width: 1920,
           height: 1080,
-        } as any
+        } as any,
       }),
       positionX: 219,
       scaleX: 1477.7 / 1920,
@@ -70,6 +65,10 @@ export const mainScene = new Scene({
       positionY: 1038,
       alignment: Alignment.TopLeft,
       cropTop: 940,
+    },
+    // Place cameraScene here
+    cameraScene: {
+      source: cameraScene,
     },
     msPaintTopBorder: {
       source: new ImageSource({
@@ -91,7 +90,7 @@ export const mainScene = new Scene({
       alignment: Alignment.TopLeft,
     },
     honkScene: {
-      source: honkScene
+      source: honkScene,
     },
   },
 });

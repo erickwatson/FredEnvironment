@@ -1,19 +1,10 @@
-import {
-  Scene,
-  SceneItemTransform,
-  Alignment,
-  MonitoringType,
-} from "@sceneify/core";
+import { SceneItemTransform, Alignment, MonitoringType } from "@sceneify/core";
 import { MediaSource } from "@sceneify/sources";
 
 import { mixItUpApi } from "./mixitup";
+import { honkScene } from "./scenes/honk";
 
 let counter = 0;
-
-export const honkScene = new Scene({
-  name: "HonkSceneify",
-  items: {},
-});
 
 const transforms: Partial<SceneItemTransform>[] = [
   {},
