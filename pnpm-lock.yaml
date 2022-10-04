@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sceneify/animation': 0.0.0-main-b1bab269
-  '@sceneify/core': 0.0.0-main-b1bab269
-  '@sceneify/filters': 0.0.0-main-b1bab269
-  '@sceneify/sources': 0.0.0-main-b1bab269
+  '@sceneify/animation': 0.0.0-main-525c6474
+  '@sceneify/core': 0.0.0-main-525c6474
+  '@sceneify/filters': 0.0.0-main-525c6474
+  '@sceneify/sources': 0.0.0-main-525c6474
   '@types/node': ^18.7.16
   dotenv: ^16.0.2
   fastify: ^4.6.0
@@ -12,10 +12,10 @@ specifiers:
   typescript: ^4.8.3
 
 dependencies:
-  '@sceneify/animation': 0.0.0-main-b1bab269
-  '@sceneify/core': 0.0.0-main-b1bab269
-  '@sceneify/filters': 0.0.0-main-b1bab269
-  '@sceneify/sources': 0.0.0-main-b1bab269
+  '@sceneify/animation': 0.0.0-main-525c6474
+  '@sceneify/core': 0.0.0-main-525c6474
+  '@sceneify/filters': 0.0.0-main-525c6474
+  '@sceneify/sources': 0.0.0-main-525c6474
   dotenv: 16.0.2
   fastify: 4.6.0
 
@@ -80,20 +80,20 @@ packages:
     engines: {node: '>= 10'}
     dev: false
 
-  /@sceneify/animation/0.0.0-main-b1bab269:
-    resolution: {integrity: sha512-954h6PvfSrhIs7WeZnKGjLmvKRYJZT3p5Yxjkc98Yjb5ctb+l1AVS/csOg9ovWUNkopz7/1MDXJUKfB7fWfBNg==}
+  /@sceneify/animation/0.0.0-main-525c6474:
+    resolution: {integrity: sha512-1Kb1GEU9SbSvCeeGL1mCn0NPpX9PeKSeaCNqhfV8MMZ2RnidHxA05O/CtAl0sYg0dMYzudmnxpolOOQ/B1+bQQ==}
     engines: {node: '>=12.17.0', npm: '>=6.13.0'}
     dependencies:
       '@datastructures-js/queue': 4.2.3
-      '@sceneify/core': 0.0.0-main-b1bab269
+      '@sceneify/core': 0.0.0-main-525c6474
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
     dev: false
 
-  /@sceneify/core/0.0.0-main-b1bab269:
-    resolution: {integrity: sha512-6OfU+7m56LunI1TOMlwNduRrEPKR0fXje08b5MX2BjmnNbnqzuemN4Yno5YMHXQqk+2YY+GcK2olR2ldCR3E0g==}
+  /@sceneify/core/0.0.0-main-525c6474:
+    resolution: {integrity: sha512-jsxGZgmNSkgEKWAX/Y2WJCjF/citOYc/KPMpszFfVEEoMHW9cZC48dySNu0kKrSAC6Fl4MJ0hp1t7Myk1BqfEw==}
     engines: {node: '>=12.17.0', npm: '>=6.13.0'}
     dependencies:
       next-tick: 1.1.0
@@ -104,22 +104,22 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@sceneify/filters/0.0.0-main-b1bab269:
-    resolution: {integrity: sha512-W+lE5qbHBi97705bfikpJ3gFRIdDM1NzWIpD8JBsDO2XvygsR3djUnWROml1388KWPqGmRHCTHTZRs5d3f3m8w==}
+  /@sceneify/filters/0.0.0-main-525c6474:
+    resolution: {integrity: sha512-/3/Xt9MYO4vRBQ/4FWa85aq8luWKfboRIQjlgllyeU+gNAqG2Yh4TwfSo6gMfYrIKdMm+CfbczaPXBlfhTMHaA==}
     engines: {node: '>=12.17.0', npm: '>=6.13.0'}
     dependencies:
-      '@sceneify/core': 0.0.0-main-b1bab269
+      '@sceneify/core': 0.0.0-main-525c6474
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
     dev: false
 
-  /@sceneify/sources/0.0.0-main-b1bab269:
-    resolution: {integrity: sha512-H6B0isy5WRmdx58yiXvpPu4OrwmSLiltR1+Fg+43GfNXrPcH/mBR74AnNCnAR5aXlzZ9T/QSHWN4eou9gqlkSQ==}
+  /@sceneify/sources/0.0.0-main-525c6474:
+    resolution: {integrity: sha512-UeYBBRuCYYKwIIA/G/grm1gybfKC5Fw2g00S6KuHPraZHRbDRr1PizB/pSs8Om6tb3gW0PKp1bY91f+AztRMyw==}
     engines: {node: '>=12.17.0', npm: '>=6.13.0'}
     dependencies:
-      '@sceneify/core': 0.0.0-main-b1bab269
+      '@sceneify/core': 0.0.0-main-525c6474
       eventemitter3: 4.0.7
     transitivePeerDependencies:
       - bufferutil

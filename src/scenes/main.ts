@@ -1,33 +1,49 @@
-import { Alignment, Scene } from "@sceneify/core";
+import { Alignment, Scene, rgba } from "@sceneify/core";
 import { BrowserSource, ColorSource, ImageSource } from "@sceneify/sources";
 
 import { cameraScene } from "./camera";
 import { honkScene } from "./honk";
 
-import { rgba } from "../utils";
-
 // Created inside programScene
 export const mainScene = new Scene({
   name: "New Main Scene",
   items: {
-    background: {
-      source: new ColorSource({
-        name: "BG ColourSource",
+    honkScene: {
+      source: honkScene,
+    },
+    msPaintToolbarHome: {
+      source: new ImageSource({
+        name: "MS Paint Toolbar Home SF",
         settings: {
-          color: rgba(24, 164, 245, 255),
+          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Border Top Home.png",
         },
       }),
+      positionY: 23,
+      alignment: Alignment.TopLeft,
     },
-    msPaintBottomBorder: {
+    msPaintTopBorder: {
       source: new ImageSource({
-        name: "MS Paint Bottom Border SF",
+        name: "MS Paint Top Border SF",
         settings: {
-          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Border Bottom.png",
+          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Border Top.png",
+        },
+      }),
+      alignment: Alignment.TopLeft,
+    },
+    cameraScene: {
+      source: cameraScene,
+    },
+    msPaintBodyFrame: {
+      source: new ImageSource({
+        name: "MS Paint Body Frame SF",
+        settings: {
+          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Body Frame Border.png",
         },
       }),
       positionX: 0,
-      positionY: 1044,
+      positionY: 1038,
       alignment: Alignment.TopLeft,
+      cropTop: 940,
     },
     horizontalChatSource: {
       source: new BrowserSource({
@@ -43,7 +59,7 @@ export const mainScene = new Scene({
               margin: 0px auto;
               overflow: hidden;
             } 
-            `,
+          `,
           reroute_audio: true,
           width: 1920,
           height: 1080,
@@ -54,43 +70,24 @@ export const mainScene = new Scene({
       alignment: Alignment.TopLeft,
       cropRight: 9,
     },
-    msPaintBodyFrame: {
+    msPaintBottomBorder: {
       source: new ImageSource({
-        name: "MS Paint Body Frame SF",
+        name: "MS Paint Bottom Border SF",
         settings: {
-          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Body Frame Border.png",
+          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Border Bottom.png",
         },
       }),
       positionX: 0,
-      positionY: 1038,
+      positionY: 1044,
       alignment: Alignment.TopLeft,
-      cropTop: 940,
     },
-    // Place cameraScene here
-    cameraScene: {
-      source: cameraScene,
-    },
-    msPaintTopBorder: {
-      source: new ImageSource({
-        name: "MS Paint Top Border SF",
+    background: {
+      source: new ColorSource({
+        name: "BG ColourSource",
         settings: {
-          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Border Top.png",
+          color: rgba(24, 164, 245),
         },
       }),
-      alignment: Alignment.TopLeft,
-    },
-    msPaintToolbarHome: {
-      source: new ImageSource({
-        name: "MS Paint Toolbar Home SF",
-        settings: {
-          file: "C:/Users/fredm/OneDrive/Pictures/Twitch/AVG Gamer/MSPaint Stream Scene Items/Borders/MS Paint Border Top Home.png",
-        },
-      }),
-      positionY: 23,
-      alignment: Alignment.TopLeft,
-    },
-    honkScene: {
-      source: honkScene,
     },
   },
 });

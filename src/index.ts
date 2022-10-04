@@ -6,6 +6,7 @@ import { setupMixItUp } from "./mixitup";
 import { decklinkCamera } from "./scenes/camera";
 import { mainScene } from "./scenes/main";
 import { programScene } from "./scenes/program";
+import { setSettingsFromPropertyList } from "./utils";
 
 setDefaultEasing(Easing.InOut);
 
@@ -50,27 +51,15 @@ async function setBGSize() {
 }
 
 async function configureCamera() {
-  // fetch input list directly from OBS
-  const deviceHashes = await decklinkCamera.getPropertyListItems("device_hash");
-
-  // find input with matching name
-  const deviceHash = deviceHashes.find(
+  await setSettingsFromPropertyList(
+    decklinkCamera,
+    "device_hash",
     (i) => i.name === "DeckLink Quad HDMI Recorder (1)"
   );
 
-  // if input is found, update settings
-  if (deviceHash)
-    await decklinkCamera.setSettings({
-      device_hash: deviceHash.value,
-    });
-
-  const modeIds = await decklinkCamera.getPropertyListItems("mode_id");
-
-  // find input with matching name
-  const modeId = modeIds.find((i) => i.name === "1080p60");
-
-  if (modeId)
-    await decklinkCamera.setSettings({
-      mode_id: modeId.value,
-    });
+  await setSettingsFromPropertyList(
+    decklinkCamera,
+    "mode_id",
+    (i) => i.name === "1080p60"
+  );
 }
