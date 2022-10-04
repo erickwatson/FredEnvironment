@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "up-sceneify": "pnpm up \"@sceneify/*@main\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sceneify/animation": "^0.0.0-main-d976bf22",
-    "@sceneify/core": "^0.0.0-main-d976bf22",
-    "@sceneify/filters": "^0.0.0-main-d976bf22",
-    "@sceneify/sources": "^0.0.0-main-d976bf22",
+    "@sceneify/animation": "0.0.0-main-525c6474",
+    "@sceneify/core": "0.0.0-main-525c6474",
+    "@sceneify/filters": "0.0.0-main-525c6474",
+    "@sceneify/sources": "0.0.0-main-525c6474",
     "dotenv": "^16.0.2",
     "fastify": "^4.6.0"
   },
